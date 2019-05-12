@@ -1,0 +1,158 @@
+header{
+    background-color: black;
+    width:100%;
+    height:100%;
+    flex-direction: row;
+    display:flex;
+}
+#imgHeader{
+    width: 450px;
+}
+#button{
+    font-weight: 700;
+    color: white;
+    background-color: black;
+}
+#searcher{
+    justify-content: flex-end;
+    align-self: flex-end;
+    display:flex;
+}
+#welcome{
+    font-weight: 800;
+    display:flex;
+    justify-content: center;
+}
+#inputButton{
+    align-self: flex-end;
+    margin-bottom: 20px;
+    display :flex;
+}
+#movieContainer{
+    margin-top: 50px;
+    margin-bottom: 150px;
+    width: 768px;
+}
+#dataDiv{
+    font-family: fantasy;
+    height: 380px;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    display:flex;
+}
+.modal-body{
+    font-weight: 600;
+    font-family: cursive;
+    justify-content: space-between;
+    flex-direction: column;
+    display:flex;
+}
+
+/*Modal Login*/
+#loginButton{
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    margin-left: 10%;
+    margin-bottom: 3%;
+    width:auto;
+    background-color: #d6d3de4f;
+    border-radius: 29px 29px 29px 29px;
+    -moz-border-radius: 29px 29px 29px 29px;
+    -webkit-border-radius: 29px 29px 29px 29px
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.buttonModal {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    font-weight: 800;
+    color:white;
+     background-color: black;
+}
+
+.modalContainer {
+  padding: 16px;
+    background-color:#f1f1f1;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+#id01{
+    width: 31%;
+    margin-top: 5%;
+    margin-left: 37%;
+}
+
+.checked{
+    color:orange;
+}
+.fa-star{
+    font-size:30px;
+}

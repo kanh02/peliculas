@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peliculas</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="./Images/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+        <header class="page-header" class="row">
+            <img id ="imgHeader" src ="Images/cinema.jpg" class = "col-sm-6">
+            <div id="searcher" class = "col-sm-6">
+                <div id = "inputButton">
+                   <input id = "input" placeholder="Movie name" type="text" class="form-control">
+                   <button id= "button" class= "btn" onclick="getSearchValue()">Search</button>
+                </div>
+                <button id="loginButton" onclick="document.getElementById('id01').style.display='block'" >Login</button>
+            </div>
+        </header>
+        <div id="welcome" ng-app="mainApp" ng-controller="controller">
+          Puedes buscar tus peliculas y agregar las favoritas para crear tu propia coleccion!!.
+        </div>
+    
+  <!--Login Modal -->
+        <div id="id01" class="modal" >
+            <div class="modalContainer">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" id="userName" placeholder="Enter Username" name="uname" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
+
+              <button type="submit" class="buttonModal" onclick="sessionStorageLogin()">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+
+            <div class="modalContainer">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" class = "buttonModal">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </div>
+    <!--/Login Modal -->
+    
+    
+        <div id ="movieContainer" class="container" class="row">
+            <img id="poster" class = "col-sm-6">
+            <div id="dataDiv" class = "col-sm-6">
+            </div>
+        </div>
+    
+    
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 id="modalHeader" class="modal-title"></h3>
+              </div>
+              <div class="modal-body">
+                    <h4 id="Actors"></h4>
+                    <h4 id="Awards"></h4>
+                    <h4 id = "Country"></h4>
+                    <h4 id="Genre"></h4>
+                    <h4 id="Plot"></h4>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- /Modal -->
+<script src="main.js"></script>
+</body>
+</html>
